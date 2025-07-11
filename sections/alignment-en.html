@@ -1,0 +1,48 @@
+<h2 id="alignment" class="list">Ontology Alignment <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<p>
+The CSite ontology aligns with multiple foundational and domain-specific ontologies to maximize semantic reuse and interoperability across construction datasets and digital twin systems. The imported ontologies provide structure for representing building components, project agents, documents, and activities in a semantically grounded way.
+</p>
+
+<h3>Imported Ontologies</h3>
+
+<table style="width:100%; border-collapse: collapse;" border="1" cellpadding="6">
+  <thead>
+    <tr style="background-color: #f0f0f0;">
+      <th>Ontology</th>
+      <th>URL</th>
+      <th>Purpose & Reused Concepts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>BOT (Building Topology Ontology)</strong></td>
+      <td><a href="https://w3id.org/bot" target="_blank">https://w3id.org/bot</a></td>
+      <td>Models spatial hierarchy of the construction site. Reuses: <code>bot:Site</code>, <code>bot:Building</code>, <code>bot:Storey</code>, <code>bot:Space</code>, <code>bot:Element</code>, <code>bot:containsZone</code>, <code>bot:hasStorey</code>.</td>
+    </tr>
+    <tr>
+      <td><strong>BFO (Basic Formal Ontology)</strong></td>
+      <td><a href="https://github.com/BFO-ontology/BFO" target="_blank">https://github.com/BFO-ontology/BFO</a></td>
+      <td>Provides foundational categories like <code>bfo:Object</code> for modeling physical items like equipment, material batches, and building components.</td>
+    </tr>
+    <tr>
+      <td><strong>PROV-O (Provenance Ontology)</strong></td>
+      <td><a href="https://www.w3.org/TR/prov-o/" target="_blank">https://www.w3.org/TR/prov-o/</a></td>
+      <td>Used to represent organizational roles and responsibilities in project execution. Reuses: <code>prov:Agent</code>, <code>prov:Organization</code>, <code>prov:Person</code>, <code>prov:wasAssociatedWith</code>, <code>prov:actedOnBehalfOf</code>.</td>
+    </tr>
+    <tr>
+      <td><strong>DICE (Digital Construction Entities)</strong></td>
+      <td><a href="https://digitalconstruction.github.io/Entities/" target="_blank">https://digitalconstruction.github.io/Entities/</a></td>
+      <td>Provides classification for digital documents and submittals. Reuses and extends: <code>dice:InformationContentEntity</code>, <code>dice:WeekPlan</code>, <code>dice:Activity</code>, <code>dice:Plan</code>.</td>
+    </tr>
+    <tr>
+      <td><strong>Event Ontology</strong></td>
+      <td><a href="http://purl.org/NET/c4dm/event.owl" target="_blank">http://purl.org/NET/c4dm/event.owl</a></td>
+      <td>Used for modeling temporal relations between activities (e.g., <code>event:time</code>, <code>event:hasSubEvent</code>, <code>event:time:before</code>).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+These alignments support querying and reasoning across building elements, activities, documents, resources, and spatial zones, and are foundational for integrating CSite with wider Linked Building Data (LBD) ecosystems.
+</p>

@@ -1,0 +1,94 @@
+<h2 id="desc" class="list">CSite: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<p>
+The <strong>CSite ontology</strong> is a modular, extensible semantic model developed to support <em>production control in construction</em>.
+It integrates data across disciplines (location, resources, activities, documents) to facilitate real-time, queryable insights in digital control rooms.
+This integrative ontology is built using OWL, aligned with established ontologies such as <code>BOT</code>, <code>PROV-O</code>, <code>BFO</code>, and <code>DICE</code>,
+and was verified with reasoners like Pellet and HermiT.
+</p>
+
+<h3>Location Module</h3>
+<ul>
+  <li><strong>csite:Project</strong><br/>
+    • Purpose: Represents distinct construction endeavors; supports dashboards tracking multiple projects.<br/>
+    • Why: Enables head-office multi-project analytics.
+  </li>
+  <li><strong>csite:Site, Building, Storey, Space</strong><br/>
+    • Purpose: Model spatial hierarchy (site → building → floor → room).<br/>
+    • Alignment: Fully aligned with BOT (Building Topology Ontology). Uses properties like <code>bot:hasStorey</code>, <code>bot:hasSpace</code>.<br/>
+    • Why: Required for spatial queries and location-based productivity tracking.
+  </li>
+  <li><strong>csite:SpaceType</strong><br/>
+    • Purpose: Differentiates spaces added during execution (e.g. staging areas).<br/>
+    • Why: Captures design vs. construction semantics; necessary for real scenario zone tracking.
+  </li>
+</ul>
+
+<figure style="text-align: center;">
+  <img src="resources/Location.jpg" alt="Location Module Diagram"
+       style="width:70%; max-width:600px; height:auto; margin: 0 auto; display: block; border:1px solid #ccc; padding:5px;">
+  <figcaption style="margin-top: 0.5em; font-style: italic;">
+    <strong>Visual overview:</strong> Location Module
+  </figcaption>
+</figure>
+
+<h3>Resource Module</h3>
+<ul>
+  <li><strong>csite:Resource, Agent, Person, Organization, Object, Equipment, MaterialBatch</strong><br/>
+    • Purpose: Captures who and what is involved in activities.<br/>
+    • Alignment:<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;• Agents aligned with PROV (<code>prov:Agent</code>, <code>prov:Person</code>, <code>prov:Organization</code>).<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;• Objects aligned with BFO (<code>bfo:Object</code>).<br/>
+    • Properties: <code>prov:wasAssociatedWith</code>, <code>prov:hadRole</code>, <code>csite:attendance</code>, <code>csite:workDuration</code>, <code>deliversWorkPackage</code>.<br/>
+    • Why: Allows queries like “Which subcontractor completed most tasks this week?” and tracking resource accountability.
+  </li>
+</ul>
+<figure style="text-align: center;">
+  <img src="resources/Resources.jpg" alt="Resource Module Diagram"
+       style="width:70%; max-width:600px; height:auto; margin: 0 auto; display: block; border:1px solid #ccc; padding:5px;">
+  <figcaption style="margin-top: 0.5em; font-style: italic;">
+    <strong>Visual overview:</strong> Resource Module
+  </figcaption>
+</figure>
+<h3>Activity Module</h3>
+<ul>
+  <li><strong>csite:Activity & Subclasses</strong><br/>
+    • Purpose: Models tasks taking place on-site with temporal, spatial, and resource links.<br/>
+    • Subclasses: Engineering, Construction, Procurement, Quality.<br/>
+    • Properties: <code>occursInSpace</code>, <code>hasResource</code>, <code>hasPlannedDate</code>, <code>hasActualDate</code>, <code>completionStatus</code>, <code>nonCompletionReason</code>.<br/>
+    • Alignment: Partially derived from DICE and event ontologies; extends them for construction control.<br/>
+    • Why: Builds a semantically rich activity timeline, enabling advanced SPARQL queries like tracking replans, bottlenecks, delays.
+  </li>
+</ul>
+<figure style="text-align: center;">
+  <img src="resources/Activity.jpg" alt="Activity Module Diagram"
+       style="width:70%; max-width:600px; height:auto; margin: 0 auto; display: block; border:1px solid #ccc; padding:5px;">
+  <figcaption style="margin-top: 0.5em; font-style: italic;">
+    <strong>Visual overview:</strong> Activity Module
+  </figcaption>
+</figure>
+<h3>Document Module</h3>
+<ul>
+  <li><strong>csite:InformationContentEntity & Subclasses</strong><br/>
+    • Purpose: Manages the documentation flow in the production lifecycle.<br/>
+    • Subclasses: WeekPlan, Pre/Construction/PostConstructionSubmittal.<br/>
+    • Properties: <code>submissionDate</code>, <code>hasDiscipline</code>, <code>hasWorkflow</code>, <code>format</code>.<br/>
+    • Alignment: Fully based on DICE, ensuring conformity with digital document standards.<br/>
+    • Why: Provides traceable link between documentation status and on-site activity statuses.
+  </li>
+</ul>
+
+<figure style="text-align: center;">
+  <img src="resources/Documents.jpg" alt="Document Module Diagram"
+       style="width:70%; max-width:600px; height:auto; margin: 0 auto; display: block; border:1px solid #ccc; padding:5px;">
+  <figcaption style="margin-top: 0.5em; font-style: italic;">
+    <strong>Visual overview:</strong> Document Module
+  </figcaption>
+</figure>
+<h3>Integration Layer</h3>
+<ul>
+  <li><strong>csite:Collection</strong><br/>
+    • Purpose: Aggregates related entities (activities, documents, resources) per project or context.<br/>
+    • Why: Simplifies grouping and filtering in SPARQL queries and dashboard visualizations.
+  </li>
+</ul>

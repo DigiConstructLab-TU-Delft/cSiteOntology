@@ -1,0 +1,726 @@
+@prefix : <http://www.owl-ontologies.com/cSite#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.owl-ontologies.com/cSite#> .
+
+<http://www.owl-ontologies.com/cSite#> rdf:type owl:Ontology ;
+                                        <http://purl.org/dc/elements/1.1/creator> "Karim Farghaly" ;
+                                        <http://purl.org/dc/elements/1.1/description> "Ontology code created by Chowlk" ;
+                                        <http://purl.org/dc/elements/1.1/title> "CSite" ;
+                                        owl:versionInfo "1.22.1" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.owl-ontologies.com/bot#adjacentZone
+<http://www.owl-ontologies.com/bot#adjacentZone> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://www.owl-ontologies.com/bot#Zone> ;
+                                                 rdfs:range <http://www.owl-ontologies.com/bot#Zone> ;
+                                                 rdfs:label "adjacent zone" .
+
+
+###  http://www.owl-ontologies.com/bot#containsZone
+<http://www.owl-ontologies.com/bot#containsZone> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://www.owl-ontologies.com/bot#Zone> ;
+                                                 rdfs:range <http://www.owl-ontologies.com/bot#Zone> ;
+                                                 rdfs:label "contains zone" .
+
+
+###  http://www.owl-ontologies.com/bot#hasBuilding
+<http://www.owl-ontologies.com/bot#hasBuilding> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://www.owl-ontologies.com/bot#Zone> ;
+                                                rdfs:range <http://www.owl-ontologies.com/bot#Building> ;
+                                                rdfs:label "has building" .
+
+
+###  http://www.owl-ontologies.com/bot#hasElement
+<http://www.owl-ontologies.com/bot#hasElement> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://www.owl-ontologies.com/bot#Zone> ;
+                                               rdfs:range <http://www.owl-ontologies.com/bot#Element> ;
+                                               rdfs:label "has element" .
+
+
+###  http://www.owl-ontologies.com/bot#hasSpace
+<http://www.owl-ontologies.com/bot#hasSpace> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://www.owl-ontologies.com/bot#Zone> ;
+                                             rdfs:range <http://www.owl-ontologies.com/bot#Space> ;
+                                             rdfs:label "has space" .
+
+
+###  http://www.owl-ontologies.com/bot#hasStorey
+<http://www.owl-ontologies.com/bot#hasStorey> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.owl-ontologies.com/bot#Zone> ;
+                                              rdfs:range <http://www.owl-ontologies.com/bot#Storey> ;
+                                              rdfs:label "has storey" .
+
+
+###  http://www.owl-ontologies.com/bot#hasSub-element
+<http://www.owl-ontologies.com/bot#hasSub-element> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.owl-ontologies.com/bot#Element> ;
+                                                   rdfs:range <http://www.owl-ontologies.com/bot#Element> ;
+                                                   rdfs:label "has sub-element" .
+
+
+###  http://www.owl-ontologies.com/bot#intersectsZone
+<http://www.owl-ontologies.com/bot#intersectsZone> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.owl-ontologies.com/bot#Zone> ;
+                                                   rdfs:range <http://www.owl-ontologies.com/bot#Zone> ;
+                                                   rdfs:label "intersects zone" .
+
+
+###  http://www.owl-ontologies.com/cSite#DeliversWP
+:DeliversWP rdf:type owl:ObjectProperty ;
+            rdfs:domain <http://www.owl-ontologies.com/prov#Agent> ;
+            rdfs:range :Workpackage ;
+            rdfs:label "delivers w p" .
+
+
+###  http://www.owl-ontologies.com/cSite#RelateToActivity
+:RelateToActivity rdf:type owl:ObjectProperty ;
+                  rdfs:domain :ProductionSubmittal ;
+                  rdfs:range <http://www.owl-ontologies.com/dice#Activity> ;
+                  rdfs:label "relate to activity" .
+
+
+###  http://www.owl-ontologies.com/cSite#WorksAtProject
+:WorksAtProject rdf:type owl:ObjectProperty ;
+                rdfs:domain <http://www.owl-ontologies.com/prov#Agent> ;
+                rdfs:range :Project ;
+                rdfs:label "works at project" .
+
+
+###  http://www.owl-ontologies.com/cSite#discussedIn
+:discussedIn rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.owl-ontologies.com/dice#Activity> ;
+             rdfs:range <http://www.owl-ontologies.com/dici#Plan> ;
+             rdfs:label "discussed in" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasFormat
+:hasFormat rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://www.owl-ontologies.com/dici#InformationContentEntity> ;
+           rdfs:range :FileFormat ;
+           rdfs:label "has format" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasMilestone
+:hasMilestone rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://www.owl-ontologies.com/dice#Activity> ,
+                          <http://www.owl-ontologies.com/dici#InformationContentEntity> ;
+              rdfs:range :Milestone ;
+              rdfs:label "has milestone" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasObject
+:hasObject rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://www.owl-ontologies.com/dice#Activity> ;
+           rdfs:range <http://www.owl-ontologies.com/bfo#Object> ;
+           rdfs:label "has object" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasOrganization
+:hasOrganization rdf:type owl:ObjectProperty ;
+                 rdfs:domain <http://www.owl-ontologies.com/dice#Activity> ,
+                             <http://www.owl-ontologies.com/dici#InformationContentEntity> ;
+                 rdfs:range <http://www.owl-ontologies.com/prov#Organization> ;
+                 rdfs:label "has organization" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasPerson
+:hasPerson rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://www.owl-ontologies.com/dice#Activity> ,
+                       <http://www.owl-ontologies.com/dici#InformationContentEntity> ;
+           rdfs:range <http://www.owl-ontologies.com/prov#Person> ;
+           rdfs:label "has person" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasProject
+:hasProject rdf:type owl:ObjectProperty ;
+            rdfs:domain <http://www.owl-ontologies.com/bot#Zone> ;
+            rdfs:range :Project ;
+            rdfs:label "has project" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasSpaceType
+:hasSpaceType rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://www.owl-ontologies.com/bot#Space> ;
+              rdfs:range :SpaceType ;
+              rdfs:label "has space type" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasSubmittalDiscpline
+:hasSubmittalDiscpline rdf:type owl:ObjectProperty ;
+                       rdfs:domain <http://www.owl-ontologies.com/dici#InformationContentEntity> ;
+                       rdfs:range :SubmittalDiscpline ;
+                       rdfs:label "has submittal discpline" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasSubmittalType
+:hasSubmittalType rdf:type owl:ObjectProperty ;
+                  rdfs:domain <http://www.owl-ontologies.com/dici#InformationContentEntity> ;
+                  rdfs:range :SubmittalType ;
+                  rdfs:label "has submittal type" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasSubmittalWorkflow
+:hasSubmittalWorkflow rdf:type owl:ObjectProperty ;
+                      rdfs:domain <http://www.owl-ontologies.com/dici#InformationContentEntity> ;
+                      rdfs:range :SubmittalWorkflow ;
+                      rdfs:label "has submittal workflow" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasWorkPackage
+:hasWorkPackage rdf:type owl:ObjectProperty ;
+                rdfs:domain <http://www.owl-ontologies.com/dice#Activity> ,
+                            <http://www.owl-ontologies.com/dici#InformationContentEntity> ;
+                rdfs:range :Workpackage ;
+                rdfs:label "has work package" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasZone
+:hasZone rdf:type owl:ObjectProperty ;
+         rdfs:domain :ProductionSubmittal ,
+                     <http://www.owl-ontologies.com/dice#Activity> ;
+         rdfs:range <http://www.owl-ontologies.com/bot#Zone> ;
+         rdfs:label "has zone" .
+
+
+###  http://www.owl-ontologies.com/cSite#responsibleForNonCompletion
+:responsibleForNonCompletion rdf:type owl:ObjectProperty ;
+                             rdfs:domain <http://www.owl-ontologies.com/dice#Activity> ;
+                             rdfs:range <http://www.owl-ontologies.com/prov#Organization> ;
+                             rdfs:label "responsible for non completion" .
+
+
+###  http://www.owl-ontologies.com/dice#hasRole
+<http://www.owl-ontologies.com/dice#hasRole> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://www.owl-ontologies.com/prov#Agent> ;
+                                             rdfs:range <http://www.owl-ontologies.com/bfo#Role> ;
+                                             rdfs:label "has role" .
+
+
+###  http://www.owl-ontologies.com/event#hasSub_event
+<http://www.owl-ontologies.com/event#hasSub_event> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.owl-ontologies.com/event#Event> ;
+                                                   rdfs:range <http://www.owl-ontologies.com/event#Event> ;
+                                                   rdfs:label "has sub_event" .
+
+
+###  http://www.owl-ontologies.com/prov#actedOnBehalfOf
+<http://www.owl-ontologies.com/prov#actedOnBehalfOf> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <http://www.owl-ontologies.com/prov#Person> ;
+                                                     rdfs:range <http://www.owl-ontologies.com/prov#Organization> ;
+                                                     rdfs:label "acted on behalf of" .
+
+
+###  http://www.owl-ontologies.com/time#after
+<http://www.owl-ontologies.com/time#after> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://www.owl-ontologies.com/event#Event> ;
+                                           rdfs:range <http://www.owl-ontologies.com/event#Event> ;
+                                           rdfs:label "after" .
+
+
+###  http://www.owl-ontologies.com/time#before
+<http://www.owl-ontologies.com/time#before> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://www.owl-ontologies.com/event#Event> ;
+                                            rdfs:range <http://www.owl-ontologies.com/event#Event> ;
+                                            rdfs:label "before" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.owl-ontologies.com/building#ifcIdenitifier
+<http://www.owl-ontologies.com/building#ifcIdenitifier> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <http://www.owl-ontologies.com/bot#Space> ;
+                                                        rdfs:range xsd:string ;
+                                                        rdfs:label "ifc idenitifier" .
+
+
+###  http://www.owl-ontologies.com/cSite#AttendanceDay
+:AttendanceDay rdf:type owl:DatatypeProperty ;
+               rdfs:domain <http://www.owl-ontologies.com/prov#Person> ;
+               rdfs:range xsd:dateTime ;
+               rdfs:label "attendance day" .
+
+
+###  http://www.owl-ontologies.com/cSite#AttendanceDuration
+:AttendanceDuration rdf:type owl:DatatypeProperty ;
+                    rdfs:domain <http://www.owl-ontologies.com/prov#Person> ;
+                    rdfs:range xsd:decimal ;
+                    rdfs:label "attendance duration" .
+
+
+###  http://www.owl-ontologies.com/cSite#CoversFrom
+:CoversFrom rdf:type owl:DatatypeProperty ;
+            rdfs:domain <http://www.owl-ontologies.com/dici#WeekPlan> ;
+            rdfs:range xsd:date ;
+            rdfs:label "covers from" .
+
+
+###  http://www.owl-ontologies.com/cSite#CoversTo
+:CoversTo rdf:type owl:DatatypeProperty ;
+          rdfs:domain <http://www.owl-ontologies.com/dici#WeekPlan> ;
+          rdfs:range xsd:date ;
+          rdfs:label "covers to" .
+
+
+###  http://www.owl-ontologies.com/cSite#ElementMesh
+:ElementMesh rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://www.owl-ontologies.com/bot#Space> ;
+             rdfs:label "element mesh" .
+
+
+###  http://www.owl-ontologies.com/cSite#PlannedVersion
+:PlannedVersion rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://www.owl-ontologies.com/dice#Activity> ;
+                rdfs:range xsd:string ;
+                rdfs:label "planned version" .
+
+
+###  http://www.owl-ontologies.com/cSite#ReasonForDelay
+:ReasonForDelay rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://www.owl-ontologies.com/dice#Activity> ;
+                rdfs:range xsd:duration ;
+                rdfs:label "reason for delay" .
+
+
+###  http://www.owl-ontologies.com/cSite#RevitId
+:RevitId rdf:type owl:DatatypeProperty ;
+         rdfs:domain <http://www.owl-ontologies.com/bot#Space> ;
+         rdfs:range xsd:string ;
+         rdfs:label "revit id" .
+
+
+###  http://www.owl-ontologies.com/cSite#StatusCompleted
+:StatusCompleted rdf:type owl:DatatypeProperty ;
+                 rdfs:domain <http://www.owl-ontologies.com/dice#Activity> ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "status completed" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasActualEnd
+:hasActualEnd rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://www.owl-ontologies.com/dice#Activity> ;
+              rdfs:range xsd:date ;
+              rdfs:label "has actual end" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasActualStart
+:hasActualStart rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://www.owl-ontologies.com/dice#Activity> ;
+                rdfs:range xsd:date ;
+                rdfs:label "has actual start" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasDescription
+:hasDescription rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://www.owl-ontologies.com/dice#Activity> ;
+                rdfs:range xsd:string ;
+                rdfs:label "has description" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasModifiedDate
+:hasModifiedDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain <http://www.owl-ontologies.com/dici#InformationContentEntity> ;
+                 rdfs:range xsd:date ;
+                 rdfs:label "has modified date" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasPlannedEnd
+:hasPlannedEnd rdf:type owl:DatatypeProperty ;
+               rdfs:domain <http://www.owl-ontologies.com/dice#Activity> ;
+               rdfs:range xsd:date ;
+               rdfs:label "has planned end" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasPlannedStart
+:hasPlannedStart rdf:type owl:DatatypeProperty ;
+                 rdfs:domain <http://www.owl-ontologies.com/dice#Activity> ;
+                 rdfs:range xsd:date ;
+                 rdfs:label "has planned start" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasRevision
+:hasRevision rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://www.owl-ontologies.com/dici#InformationContentEntity> ;
+             rdfs:range xsd:string ;
+             rdfs:label "has revision" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasSpaceNumber
+:hasSpaceNumber rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://www.owl-ontologies.com/bot#Space> ;
+                rdfs:range xsd:string ;
+                rdfs:label "has space number" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasStatus
+:hasStatus rdf:type owl:DatatypeProperty ;
+           rdfs:domain <http://www.owl-ontologies.com/dici#InformationContentEntity> ;
+           rdfs:range xsd:string ;
+           rdfs:label "has status" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasSubmissionDate
+:hasSubmissionDate rdf:type owl:DatatypeProperty ;
+                   rdfs:domain <http://www.owl-ontologies.com/dici#InformationContentEntity> ;
+                   rdfs:range xsd:date ;
+                   rdfs:label "has submission date" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasSubmittedDate
+:hasSubmittedDate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain <http://www.owl-ontologies.com/dici#InformationContentEntity> ;
+                  rdfs:range xsd:date ;
+                  rdfs:label "has submitted date" .
+
+
+###  http://www.owl-ontologies.com/cSite#hasVersion
+:hasVersion rdf:type owl:DatatypeProperty ;
+            rdfs:domain <http://www.owl-ontologies.com/dici#InformationContentEntity> ;
+            rdfs:range xsd:string ;
+            rdfs:label "has version" .
+
+
+###  http://www.owl-ontologies.com/foaf#firstName
+<http://www.owl-ontologies.com/foaf#firstName> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://www.owl-ontologies.com/prov#Person> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:label "first name" .
+
+
+###  http://www.owl-ontologies.com/foaf#lastName
+<http://www.owl-ontologies.com/foaf#lastName> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://www.owl-ontologies.com/prov#Person> ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:label "last name" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.owl-ontologies.com/bfo#Equipement
+<http://www.owl-ontologies.com/bfo#Equipement> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.owl-ontologies.com/bfo#Object> ;
+                                               rdfs:label "Equipement" .
+
+
+###  http://www.owl-ontologies.com/bfo#MaterialBatch
+<http://www.owl-ontologies.com/bfo#MaterialBatch> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.owl-ontologies.com/bfo#Object> ;
+                                                  rdfs:label "Material Batch" .
+
+
+###  http://www.owl-ontologies.com/bfo#Object
+<http://www.owl-ontologies.com/bfo#Object> rdf:type owl:Class ;
+                                           rdfs:subClassOf :Resource ;
+                                           rdfs:label "Object" .
+
+
+###  http://www.owl-ontologies.com/bfo#Role
+<http://www.owl-ontologies.com/bfo#Role> rdf:type owl:Class ;
+                                         rdfs:subClassOf :OtherCollection ;
+                                         rdfs:label "Role" .
+
+
+###  http://www.owl-ontologies.com/bot#Building
+<http://www.owl-ontologies.com/bot#Building> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://www.owl-ontologies.com/bot#Zone> ;
+                                             rdfs:label "Building" .
+
+
+###  http://www.owl-ontologies.com/bot#Element
+<http://www.owl-ontologies.com/bot#Element> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://www.owl-ontologies.com/dice#BuildingObject> ;
+                                            rdfs:label "Element" .
+
+
+###  http://www.owl-ontologies.com/bot#Site
+<http://www.owl-ontologies.com/bot#Site> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.owl-ontologies.com/bot#Zone> ;
+                                         rdfs:label "Site" .
+
+
+###  http://www.owl-ontologies.com/bot#Space
+<http://www.owl-ontologies.com/bot#Space> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.owl-ontologies.com/bot#Zone> ;
+                                          rdfs:label "Space" .
+
+
+###  http://www.owl-ontologies.com/bot#Storey
+<http://www.owl-ontologies.com/bot#Storey> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://www.owl-ontologies.com/bot#Zone> ;
+                                           rdfs:label "Storey" .
+
+
+###  http://www.owl-ontologies.com/bot#Zone
+<http://www.owl-ontologies.com/bot#Zone> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.owl-ontologies.com/dice#Location> ;
+                                         rdfs:label "Zone" .
+
+
+###  http://www.owl-ontologies.com/cSite#AuthorityToProceed
+:AuthorityToProceed rdf:type owl:Class ;
+                    rdfs:subClassOf :QualityActivity ;
+                    rdfs:label "Authority To Proceed" .
+
+
+###  http://www.owl-ontologies.com/cSite#Collection
+:Collection rdf:type owl:Class ;
+            rdfs:label "Collection" .
+
+
+###  http://www.owl-ontologies.com/cSite#ConstructionSubmittal
+:ConstructionSubmittal rdf:type owl:Class ;
+                       rdfs:subClassOf :ProductionSubmittal ;
+                       rdfs:label "Construction Submittal" .
+
+
+###  http://www.owl-ontologies.com/cSite#ConstuctiionActivity
+:ConstuctiionActivity rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.owl-ontologies.com/dice#Activity> ;
+                      rdfs:label "Constuctiion Activity" .
+
+
+###  http://www.owl-ontologies.com/cSite#Contractor
+:Contractor rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.owl-ontologies.com/prov#Organization> ;
+            rdfs:label "Contractor" .
+
+
+###  http://www.owl-ontologies.com/cSite#Designer
+:Designer rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.owl-ontologies.com/prov#Organization> ;
+          rdfs:label "Designer" .
+
+
+###  http://www.owl-ontologies.com/cSite#EngineeringActivity
+:EngineeringActivity rdf:type owl:Class ;
+                     rdfs:subClassOf <http://www.owl-ontologies.com/dice#Activity> ;
+                     rdfs:label "Engineering Activity" .
+
+
+###  http://www.owl-ontologies.com/cSite#FileFormat
+:FileFormat rdf:type owl:Class ;
+            rdfs:subClassOf :SubmittalCollection ;
+            rdfs:label "File Format" .
+
+
+###  http://www.owl-ontologies.com/cSite#HaulageComapny
+:HaulageComapny rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.owl-ontologies.com/prov#Organization> ;
+                rdfs:label "Haulage Comapny" .
+
+
+###  http://www.owl-ontologies.com/cSite#Milestone
+:Milestone rdf:type owl:Class ;
+           rdfs:subClassOf :OtherCollection ;
+           rdfs:label "Milestone" .
+
+
+###  http://www.owl-ontologies.com/cSite#OtherCollection
+:OtherCollection rdf:type owl:Class ;
+                 rdfs:subClassOf :Collection ;
+                 rdfs:label "Other Collection" .
+
+
+###  http://www.owl-ontologies.com/cSite#Owner
+:Owner rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.owl-ontologies.com/prov#Organization> ;
+       rdfs:label "Owner" .
+
+
+###  http://www.owl-ontologies.com/cSite#PostconstructionSubmittal
+:PostconstructionSubmittal rdf:type owl:Class ;
+                           rdfs:subClassOf :ProductionSubmittal ;
+                           rdfs:label "Postconstruction Submittal" .
+
+
+###  http://www.owl-ontologies.com/cSite#PreconstructionSubmittal
+:PreconstructionSubmittal rdf:type owl:Class ;
+                          rdfs:subClassOf :ProductionSubmittal ;
+                          rdfs:label "Preconstruction Submittal" .
+
+
+###  http://www.owl-ontologies.com/cSite#ProcurementActivity
+:ProcurementActivity rdf:type owl:Class ;
+                     rdfs:subClassOf <http://www.owl-ontologies.com/dice#Activity> ;
+                     rdfs:label "Procurement Activity" .
+
+
+###  http://www.owl-ontologies.com/cSite#ProductionSubmittal
+:ProductionSubmittal rdf:type owl:Class ;
+                     rdfs:subClassOf <http://www.owl-ontologies.com/dici#Dataset> ;
+                     rdfs:label "Production Submittal" .
+
+
+###  http://www.owl-ontologies.com/cSite#Project
+:Project rdf:type owl:Class ;
+         rdfs:subClassOf :OtherCollection ;
+         rdfs:label "Project" .
+
+
+###  http://www.owl-ontologies.com/cSite#QualityActivity
+:QualityActivity rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.owl-ontologies.com/dice#Activity> ;
+                 rdfs:label "Quality Activity" .
+
+
+###  http://www.owl-ontologies.com/cSite#QualityHoldPoint
+:QualityHoldPoint rdf:type owl:Class ;
+                  rdfs:subClassOf :QualityActivity ;
+                  rdfs:label "Quality Hold Point" .
+
+
+###  http://www.owl-ontologies.com/cSite#QualitySignOff
+:QualitySignOff rdf:type owl:Class ;
+                rdfs:subClassOf :QualityActivity ;
+                rdfs:label "Quality Sign Off" .
+
+
+###  http://www.owl-ontologies.com/cSite#Resource
+:Resource rdf:type owl:Class ;
+          rdfs:label "Resource" .
+
+
+###  http://www.owl-ontologies.com/cSite#SpaceType
+:SpaceType rdf:type owl:Class ;
+           rdfs:subClassOf :OtherCollection ;
+           rdfs:label "Space Type" .
+
+
+###  http://www.owl-ontologies.com/cSite#SubmittalCollection
+:SubmittalCollection rdf:type owl:Class ;
+                     rdfs:subClassOf :Collection ;
+                     rdfs:label "Submittal Collection" .
+
+
+###  http://www.owl-ontologies.com/cSite#SubmittalDiscpline
+:SubmittalDiscpline rdf:type owl:Class ;
+                    rdfs:subClassOf :SubmittalCollection ;
+                    rdfs:label "Submittal Discpline" .
+
+
+###  http://www.owl-ontologies.com/cSite#SubmittalType
+:SubmittalType rdf:type owl:Class ;
+               rdfs:subClassOf :SubmittalCollection ;
+               rdfs:label "Submittal Type" .
+
+
+###  http://www.owl-ontologies.com/cSite#SubmittalWorkflow
+:SubmittalWorkflow rdf:type owl:Class ;
+                   rdfs:subClassOf :SubmittalCollection ;
+                   rdfs:label "Submittal Workflow" .
+
+
+###  http://www.owl-ontologies.com/cSite#Workpackage
+:Workpackage rdf:type owl:Class ;
+             rdfs:subClassOf :OtherCollection ;
+             rdfs:label "Workpackage" .
+
+
+###  http://www.owl-ontologies.com/dice#Activity
+<http://www.owl-ontologies.com/dice#Activity> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://www.owl-ontologies.com/event#Event> ;
+                                              rdfs:label "Activity" .
+
+
+###  http://www.owl-ontologies.com/dice#BuildingObject
+<http://www.owl-ontologies.com/dice#BuildingObject> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://www.owl-ontologies.com/bfo#Object> ;
+                                                    rdfs:label "Building Object" .
+
+
+###  http://www.owl-ontologies.com/dice#Location
+<http://www.owl-ontologies.com/dice#Location> rdf:type owl:Class ;
+                                              rdfs:label "Location" .
+
+
+###  http://www.owl-ontologies.com/dici#Dataset
+<http://www.owl-ontologies.com/dici#Dataset> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://www.owl-ontologies.com/dici#InformationContainer> ;
+                                             rdfs:label "Dataset" .
+
+
+###  http://www.owl-ontologies.com/dici#InformationContainer
+<http://www.owl-ontologies.com/dici#InformationContainer> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.owl-ontologies.com/dici#InformationContentEntity> ;
+                                                          rdfs:label "Information Container" .
+
+
+###  http://www.owl-ontologies.com/dici#InformationContentEntity
+<http://www.owl-ontologies.com/dici#InformationContentEntity> rdf:type owl:Class ;
+                                                              rdfs:label "Information Content Entity" .
+
+
+###  http://www.owl-ontologies.com/dici#Plan
+<http://www.owl-ontologies.com/dici#Plan> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.owl-ontologies.com/dici#Dataset> ;
+                                          rdfs:label "Plan" .
+
+
+###  http://www.owl-ontologies.com/dici#WeekPlan
+<http://www.owl-ontologies.com/dici#WeekPlan> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://www.owl-ontologies.com/dici#Plan> ;
+                                              rdfs:label "Week Plan" .
+
+
+###  http://www.owl-ontologies.com/event#Event
+<http://www.owl-ontologies.com/event#Event> rdf:type owl:Class ;
+                                            rdfs:label "Event" .
+
+
+###  http://www.owl-ontologies.com/prov#Agent
+<http://www.owl-ontologies.com/prov#Agent> rdf:type owl:Class ;
+                                           rdfs:subClassOf :Resource ;
+                                           rdfs:label "Agent" .
+
+
+###  http://www.owl-ontologies.com/prov#Organization
+<http://www.owl-ontologies.com/prov#Organization> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.owl-ontologies.com/prov#Agent> ;
+                                                  rdfs:label "Organization" .
+
+
+###  http://www.owl-ontologies.com/prov#Person
+<http://www.owl-ontologies.com/prov#Person> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://www.owl-ontologies.com/prov#Agent> ;
+                                            rdfs:label "Person" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

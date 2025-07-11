@@ -1,0 +1,131 @@
+<h2 id="usage" class="list">Usage <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<p>
+To use the cSite ontology in a project, import it using its namespace:
+</p>
+<pre><code>
+@prefix csite: &lt;https://w3id.org/csite#&gt; .
+</code></pre>
+
+<p>
+Then, map your source data—whether from Revit, Synchro, Excel 3-week lookahead sheets, or BIM 360 submittal logs—to corresponding <code>csite:</code> classes. You can define individuals for:
+</p>
+<ul>
+  <li><code>csite:Activity</code> and subclasses to represent planned tasks</li>
+  <li><code>csite:Organization</code> and <code>csite:Person</code> based on teams and agents</li>
+  <li><code>csite:Space</code> and <code>bot:Storey</code> to represent spatial zones</li>
+  <li><code>csite:WeekPlan</code> and <code>csite:Submittal</code> to represent documents</li>
+</ul>
+
+<h3>🔍 Example 1: Count of deliverables completed per storey in each week plan</h3>
+<p>This query retrieves the number of completed activities linked to spaces on each storey from recent week plans.</p>
+<pre><code>
+SELECT ?storey ?weekplan (COUNT(?activity) AS ?count) WHERE {
+  ?weekplan cSite:CoversFrom ?date.
+  ?activityversion cSite:discussedIn ?weekplan.
+  ?activity cSite:hasPlannedVersion ?activityversion;
+           cSite:hasZone ?space.
+  ?space bot:hasStorey ?storey.
+  ?activityversion cSite:StatusCompleted ?status.
+  BIND((NOW()) - "P0Y6M28DT0M0S"^^xsd:yearMonthDuration AS ?sixweeksago)
+  FILTER(?date > ?sixweeksago)
+  FILTER(?status = "Yes"^^xsd:string)
+}
+GROUP BY ?storey ?weekplan
+ORDER BY (?storey)
+</code></pre>
+
+<h3>🔍 Example 2: Completion rate per storey and organization</h3>
+<p>This query compares planned vs. actually completed activities to compute completion rates per team and location.</p>
+<pre><code>
+SELECT ?storey ?org ((xsd:float(COUNT(DISTINCT ?activityC))) / 
+                    (xsd:float(COUNT(DISTINCT ?activity)))) AS ?Completion_Rate WHERE {
+  ?weekplan cSite:CoversFrom ?date.
+  ?activitycompversion cSite:discussedIn ?weekplan.
+  ?activityC cSite:hasPlannedVersion ?activitycompversion.
+  ?activitycompversion cSite:StatusCompleted ?status.
+  ?activityC cSite:hasOrganization ?org;
+              cSite:hasZone ?space1.
+  ?activityversion cSite:discussedIn ?weekplan.
+  ?activity cSite:hasPlannedVersion ?activityversion.
+  ?activityversion cSite:StatusCompleted ?status1.
+  ?activity cSite:hasOrganization ?org;
+             cSite:hasZone ?space.
+  ?space bot:hasStorey ?storey.
+  ?space1 bot:hasStorey ?storey.
+  BIND((NOW()) - "P0Y6M28DT0M0S"^^xsd:yearMonthDuration AS ?sixweeksago)
+  FILTER(?date > ?sixweeksago)
+  FILTER(?status = "Yes"^^xsd:string)
+}
+GROUP BY ?storey ?org
+ORDER BY (?storey) (?Completion_Rate)
+</code></pre>
+
+<h3>🔍 Example 3: Top reasons for non-completion by responsible org</h3>
+<p>This identifies the top 10 reasons for activity delays, aggregated per subcontractor or team.</p>
+<pre><code>
+SELECT ?org ?reason (COUNT(?reason) AS ?reasoncount) WHERE {
+  ?activity cSite:hasOrganization ?org.
+  ?activityversion cSite:discussedIn ?weekplan.
+  ?activity cSite:hasPlannedVersion ?activityversion.
+  ?activityversion cSite:ReasonForDelay ?reason.
+  {
+    SELECT ?org (COUNT(?activityversion) AS ?count) WHERE {
+      ?weekplan cSite:CoversFrom ?date.
+      ?activityversion cSite:StatusCompleted ?status.
+      ?activity cSite:hasOrganization ?org.
+      BIND((NOW()) - "P0Y6M28DT0M0S"^^xsd:yearMonthDuration AS ?sixweeksago)
+      FILTER(?date > ?sixweeksago)
+      FILTER(?status = "No"^^xsd:string)
+    }
+    GROUP BY ?org
+    ORDER BY DESC (?count)
+    LIMIT 1
+  }
+}
+GROUP BY ?org ?reason
+ORDER BY DESC (?reasoncount)
+LIMIT 10
+</code></pre>
+
+<h3>🔍 Example 4: Completion rate across organizations per week</h3>
+<p>Calculates how much planned work per organization was completed in each week plan, showing improvement trends.</p>
+<pre><code>
+SELECT ?weekplan ?org 
+       (COUNT(DISTINCT ?activityC) AS ?N_completed_activities)
+       (COUNT(DISTINCT ?activity) AS ?N_activities)
+       ((xsd:float(COUNT(DISTINCT ?activityC)) / 
+         xsd:float(COUNT(DISTINCT ?activity))) AS ?Completion_Rate) WHERE {
+  ?weekplan cSite:CoversFrom ?date.
+  ?activitycompversion cSite:discussedIn ?weekplan.
+  ?activityC cSite:hasPlannedVersion ?activitycompversion.
+  ?activitycompversion cSite:StatusCompleted ?status.
+  ?activityC cSite:hasOrganization ?org.
+  ?activityversion cSite:discussedIn ?weekplan.
+  ?activity cSite:hasPlannedVersion ?activityversion.
+  ?activityversion cSite:StatusCompleted ?status1.
+  ?activity cSite:hasOrganization ?org.
+  BIND((NOW()) - "P0Y6M28DT0M0S"^^xsd:yearMonthDuration AS ?sixweeksago)
+  FILTER(?date > ?sixweeksago)
+  FILTER(?status = "Yes"^^xsd:string)
+}
+GROUP BY ?weekplan ?org
+ORDER BY (?weekplan) DESC (?Completion_Rate)
+</code></pre>
+
+<p>
+These examples were tested in live projects and enabled control room staff to:
+<ul>
+  <li>Spot trends in subcontractor performance</li>
+  <li>Track completion across zones and disciplines</li>
+  <li>Address bottlenecks early through reasoning</li>
+  <li>Visualize real vs. planned progress by week</li>
+</ul>
+</p>
+
+<figure style="text-align: center;">
+  <img src="resources/dashboardimage.jpg" alt="Dashboard Image"
+       style="width:70%; max-width:600px; height:auto; margin: 0 auto; display: block; border:1px solid #ccc; padding:5px;">
+  <figcaption style="margin-top: 0.5em; font-style: italic;">
+    <strong>Visual overview:</strong> Anonymised snapshot from ontology use in real project 
+  </figcaption>

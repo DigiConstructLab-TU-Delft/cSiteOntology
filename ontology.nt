@@ -1,0 +1,634 @@
+<http://www.owl-ontologies.com/cSite#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.owl-ontologies.com/cSite#> <http://purl.org/dc/elements/1.1/creator> "Karim Farghaly" .
+<http://www.owl-ontologies.com/cSite#> <http://purl.org/dc/elements/1.1/description> "Ontology code created by Chowlk" .
+<http://www.owl-ontologies.com/cSite#> <http://purl.org/dc/elements/1.1/title> "CSite" .
+<http://www.owl-ontologies.com/cSite#> <http://www.w3.org/2002/07/owl#versionInfo> "1.22.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#duration
+<http://www.w3.org/2001/XMLSchema#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.owl-ontologies.com/bot#adjacentZone
+<http://www.owl-ontologies.com/bot#adjacentZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#label> "adjacent zone" .
+# 
+# http://www.owl-ontologies.com/bot#containsZone
+<http://www.owl-ontologies.com/bot#containsZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#label> "contains zone" .
+# 
+# http://www.owl-ontologies.com/bot#hasBuilding
+<http://www.owl-ontologies.com/bot#hasBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/bot#Building> .
+<http://www.owl-ontologies.com/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "has building" .
+# 
+# http://www.owl-ontologies.com/bot#hasElement
+<http://www.owl-ontologies.com/bot#hasElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/bot#Element> .
+<http://www.owl-ontologies.com/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#label> "has element" .
+# 
+# http://www.owl-ontologies.com/bot#hasSpace
+<http://www.owl-ontologies.com/bot#hasSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/bot#Space> .
+<http://www.owl-ontologies.com/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#label> "has space" .
+# 
+# http://www.owl-ontologies.com/bot#hasStorey
+<http://www.owl-ontologies.com/bot#hasStorey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/bot#Storey> .
+<http://www.owl-ontologies.com/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#label> "has storey" .
+# 
+# http://www.owl-ontologies.com/bot#hasSub-element
+<http://www.owl-ontologies.com/bot#hasSub-element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/bot#hasSub-element> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/bot#Element> .
+<http://www.owl-ontologies.com/bot#hasSub-element> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/bot#Element> .
+<http://www.owl-ontologies.com/bot#hasSub-element> <http://www.w3.org/2000/01/rdf-schema#label> "has sub-element" .
+# 
+# http://www.owl-ontologies.com/bot#intersectsZone
+<http://www.owl-ontologies.com/bot#intersectsZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/bot#intersectsZone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/bot#intersectsZone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/bot#intersectsZone> <http://www.w3.org/2000/01/rdf-schema#label> "intersects zone" .
+# 
+# http://www.owl-ontologies.com/cSite#DeliversWP
+<http://www.owl-ontologies.com/cSite#DeliversWP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#DeliversWP> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/prov#Agent> .
+<http://www.owl-ontologies.com/cSite#DeliversWP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/cSite#Workpackage> .
+<http://www.owl-ontologies.com/cSite#DeliversWP> <http://www.w3.org/2000/01/rdf-schema#label> "delivers w p" .
+# 
+# http://www.owl-ontologies.com/cSite#RelateToActivity
+<http://www.owl-ontologies.com/cSite#RelateToActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#RelateToActivity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/cSite#ProductionSubmittal> .
+<http://www.owl-ontologies.com/cSite#RelateToActivity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#RelateToActivity> <http://www.w3.org/2000/01/rdf-schema#label> "relate to activity" .
+# 
+# http://www.owl-ontologies.com/cSite#WorksAtProject
+<http://www.owl-ontologies.com/cSite#WorksAtProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#WorksAtProject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/prov#Agent> .
+<http://www.owl-ontologies.com/cSite#WorksAtProject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/cSite#Project> .
+<http://www.owl-ontologies.com/cSite#WorksAtProject> <http://www.w3.org/2000/01/rdf-schema#label> "works at project" .
+# 
+# http://www.owl-ontologies.com/cSite#discussedIn
+<http://www.owl-ontologies.com/cSite#discussedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#discussedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#discussedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/dici#Plan> .
+<http://www.owl-ontologies.com/cSite#discussedIn> <http://www.w3.org/2000/01/rdf-schema#label> "discussed in" .
+# 
+# http://www.owl-ontologies.com/cSite#hasFormat
+<http://www.owl-ontologies.com/cSite#hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#hasFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#InformationContentEntity> .
+<http://www.owl-ontologies.com/cSite#hasFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/cSite#FileFormat> .
+<http://www.owl-ontologies.com/cSite#hasFormat> <http://www.w3.org/2000/01/rdf-schema#label> "has format" .
+# 
+# http://www.owl-ontologies.com/cSite#hasMilestone
+<http://www.owl-ontologies.com/cSite#hasMilestone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#hasMilestone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#hasMilestone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#InformationContentEntity> .
+<http://www.owl-ontologies.com/cSite#hasMilestone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/cSite#Milestone> .
+<http://www.owl-ontologies.com/cSite#hasMilestone> <http://www.w3.org/2000/01/rdf-schema#label> "has milestone" .
+# 
+# http://www.owl-ontologies.com/cSite#hasObject
+<http://www.owl-ontologies.com/cSite#hasObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#hasObject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#hasObject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/bfo#Object> .
+<http://www.owl-ontologies.com/cSite#hasObject> <http://www.w3.org/2000/01/rdf-schema#label> "has object" .
+# 
+# http://www.owl-ontologies.com/cSite#hasOrganization
+<http://www.owl-ontologies.com/cSite#hasOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#hasOrganization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#hasOrganization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#InformationContentEntity> .
+<http://www.owl-ontologies.com/cSite#hasOrganization> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/prov#Organization> .
+<http://www.owl-ontologies.com/cSite#hasOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "has organization" .
+# 
+# http://www.owl-ontologies.com/cSite#hasPerson
+<http://www.owl-ontologies.com/cSite#hasPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#hasPerson> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#hasPerson> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#InformationContentEntity> .
+<http://www.owl-ontologies.com/cSite#hasPerson> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/prov#Person> .
+<http://www.owl-ontologies.com/cSite#hasPerson> <http://www.w3.org/2000/01/rdf-schema#label> "has person" .
+# 
+# http://www.owl-ontologies.com/cSite#hasProject
+<http://www.owl-ontologies.com/cSite#hasProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#hasProject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/cSite#hasProject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/cSite#Project> .
+<http://www.owl-ontologies.com/cSite#hasProject> <http://www.w3.org/2000/01/rdf-schema#label> "has project" .
+# 
+# http://www.owl-ontologies.com/cSite#hasSpaceType
+<http://www.owl-ontologies.com/cSite#hasSpaceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#hasSpaceType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/bot#Space> .
+<http://www.owl-ontologies.com/cSite#hasSpaceType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/cSite#SpaceType> .
+<http://www.owl-ontologies.com/cSite#hasSpaceType> <http://www.w3.org/2000/01/rdf-schema#label> "has space type" .
+# 
+# http://www.owl-ontologies.com/cSite#hasSubmittalDiscpline
+<http://www.owl-ontologies.com/cSite#hasSubmittalDiscpline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#hasSubmittalDiscpline> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#InformationContentEntity> .
+<http://www.owl-ontologies.com/cSite#hasSubmittalDiscpline> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/cSite#SubmittalDiscpline> .
+<http://www.owl-ontologies.com/cSite#hasSubmittalDiscpline> <http://www.w3.org/2000/01/rdf-schema#label> "has submittal discpline" .
+# 
+# http://www.owl-ontologies.com/cSite#hasSubmittalType
+<http://www.owl-ontologies.com/cSite#hasSubmittalType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#hasSubmittalType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#InformationContentEntity> .
+<http://www.owl-ontologies.com/cSite#hasSubmittalType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/cSite#SubmittalType> .
+<http://www.owl-ontologies.com/cSite#hasSubmittalType> <http://www.w3.org/2000/01/rdf-schema#label> "has submittal type" .
+# 
+# http://www.owl-ontologies.com/cSite#hasSubmittalWorkflow
+<http://www.owl-ontologies.com/cSite#hasSubmittalWorkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#hasSubmittalWorkflow> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#InformationContentEntity> .
+<http://www.owl-ontologies.com/cSite#hasSubmittalWorkflow> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/cSite#SubmittalWorkflow> .
+<http://www.owl-ontologies.com/cSite#hasSubmittalWorkflow> <http://www.w3.org/2000/01/rdf-schema#label> "has submittal workflow" .
+# 
+# http://www.owl-ontologies.com/cSite#hasWorkPackage
+<http://www.owl-ontologies.com/cSite#hasWorkPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#hasWorkPackage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#hasWorkPackage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#InformationContentEntity> .
+<http://www.owl-ontologies.com/cSite#hasWorkPackage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/cSite#Workpackage> .
+<http://www.owl-ontologies.com/cSite#hasWorkPackage> <http://www.w3.org/2000/01/rdf-schema#label> "has work package" .
+# 
+# http://www.owl-ontologies.com/cSite#hasZone
+<http://www.owl-ontologies.com/cSite#hasZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#hasZone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/cSite#ProductionSubmittal> .
+<http://www.owl-ontologies.com/cSite#hasZone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#hasZone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/cSite#hasZone> <http://www.w3.org/2000/01/rdf-schema#label> "has zone" .
+# 
+# http://www.owl-ontologies.com/cSite#responsibleForNonCompletion
+<http://www.owl-ontologies.com/cSite#responsibleForNonCompletion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/cSite#responsibleForNonCompletion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#responsibleForNonCompletion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/prov#Organization> .
+<http://www.owl-ontologies.com/cSite#responsibleForNonCompletion> <http://www.w3.org/2000/01/rdf-schema#label> "responsible for non completion" .
+# 
+# http://www.owl-ontologies.com/dice#hasRole
+<http://www.owl-ontologies.com/dice#hasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/dice#hasRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/prov#Agent> .
+<http://www.owl-ontologies.com/dice#hasRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/bfo#Role> .
+<http://www.owl-ontologies.com/dice#hasRole> <http://www.w3.org/2000/01/rdf-schema#label> "has role" .
+# 
+# http://www.owl-ontologies.com/event#hasSub_event
+<http://www.owl-ontologies.com/event#hasSub_event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/event#hasSub_event> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/event#Event> .
+<http://www.owl-ontologies.com/event#hasSub_event> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/event#Event> .
+<http://www.owl-ontologies.com/event#hasSub_event> <http://www.w3.org/2000/01/rdf-schema#label> "has sub_event" .
+# 
+# http://www.owl-ontologies.com/prov#actedOnBehalfOf
+<http://www.owl-ontologies.com/prov#actedOnBehalfOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/prov#actedOnBehalfOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/prov#Person> .
+<http://www.owl-ontologies.com/prov#actedOnBehalfOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/prov#Organization> .
+<http://www.owl-ontologies.com/prov#actedOnBehalfOf> <http://www.w3.org/2000/01/rdf-schema#label> "acted on behalf of" .
+# 
+# http://www.owl-ontologies.com/time#after
+<http://www.owl-ontologies.com/time#after> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/time#after> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/event#Event> .
+<http://www.owl-ontologies.com/time#after> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/event#Event> .
+<http://www.owl-ontologies.com/time#after> <http://www.w3.org/2000/01/rdf-schema#label> "after" .
+# 
+# http://www.owl-ontologies.com/time#before
+<http://www.owl-ontologies.com/time#before> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/time#before> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/event#Event> .
+<http://www.owl-ontologies.com/time#before> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/event#Event> .
+<http://www.owl-ontologies.com/time#before> <http://www.w3.org/2000/01/rdf-schema#label> "before" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.owl-ontologies.com/building#ifcIdenitifier
+<http://www.owl-ontologies.com/building#ifcIdenitifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/building#ifcIdenitifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/bot#Space> .
+<http://www.owl-ontologies.com/building#ifcIdenitifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.owl-ontologies.com/building#ifcIdenitifier> <http://www.w3.org/2000/01/rdf-schema#label> "ifc idenitifier" .
+# 
+# http://www.owl-ontologies.com/cSite#AttendanceDay
+<http://www.owl-ontologies.com/cSite#AttendanceDay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#AttendanceDay> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/prov#Person> .
+<http://www.owl-ontologies.com/cSite#AttendanceDay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.owl-ontologies.com/cSite#AttendanceDay> <http://www.w3.org/2000/01/rdf-schema#label> "attendance day" .
+# 
+# http://www.owl-ontologies.com/cSite#AttendanceDuration
+<http://www.owl-ontologies.com/cSite#AttendanceDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#AttendanceDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/prov#Person> .
+<http://www.owl-ontologies.com/cSite#AttendanceDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.owl-ontologies.com/cSite#AttendanceDuration> <http://www.w3.org/2000/01/rdf-schema#label> "attendance duration" .
+# 
+# http://www.owl-ontologies.com/cSite#CoversFrom
+<http://www.owl-ontologies.com/cSite#CoversFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#CoversFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#WeekPlan> .
+<http://www.owl-ontologies.com/cSite#CoversFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.owl-ontologies.com/cSite#CoversFrom> <http://www.w3.org/2000/01/rdf-schema#label> "covers from" .
+# 
+# http://www.owl-ontologies.com/cSite#CoversTo
+<http://www.owl-ontologies.com/cSite#CoversTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#CoversTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#WeekPlan> .
+<http://www.owl-ontologies.com/cSite#CoversTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.owl-ontologies.com/cSite#CoversTo> <http://www.w3.org/2000/01/rdf-schema#label> "covers to" .
+# 
+# http://www.owl-ontologies.com/cSite#ElementMesh
+<http://www.owl-ontologies.com/cSite#ElementMesh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#ElementMesh> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/bot#Space> .
+<http://www.owl-ontologies.com/cSite#ElementMesh> <http://www.w3.org/2000/01/rdf-schema#label> "element mesh" .
+# 
+# http://www.owl-ontologies.com/cSite#PlannedVersion
+<http://www.owl-ontologies.com/cSite#PlannedVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#PlannedVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#PlannedVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.owl-ontologies.com/cSite#PlannedVersion> <http://www.w3.org/2000/01/rdf-schema#label> "planned version" .
+# 
+# http://www.owl-ontologies.com/cSite#ReasonForDelay
+<http://www.owl-ontologies.com/cSite#ReasonForDelay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#ReasonForDelay> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#ReasonForDelay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://www.owl-ontologies.com/cSite#ReasonForDelay> <http://www.w3.org/2000/01/rdf-schema#label> "reason for delay" .
+# 
+# http://www.owl-ontologies.com/cSite#RevitId
+<http://www.owl-ontologies.com/cSite#RevitId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#RevitId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/bot#Space> .
+<http://www.owl-ontologies.com/cSite#RevitId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.owl-ontologies.com/cSite#RevitId> <http://www.w3.org/2000/01/rdf-schema#label> "revit id" .
+# 
+# http://www.owl-ontologies.com/cSite#StatusCompleted
+<http://www.owl-ontologies.com/cSite#StatusCompleted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#StatusCompleted> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#StatusCompleted> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.owl-ontologies.com/cSite#StatusCompleted> <http://www.w3.org/2000/01/rdf-schema#label> "status completed" .
+# 
+# http://www.owl-ontologies.com/cSite#hasActualEnd
+<http://www.owl-ontologies.com/cSite#hasActualEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#hasActualEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#hasActualEnd> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.owl-ontologies.com/cSite#hasActualEnd> <http://www.w3.org/2000/01/rdf-schema#label> "has actual end" .
+# 
+# http://www.owl-ontologies.com/cSite#hasActualStart
+<http://www.owl-ontologies.com/cSite#hasActualStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#hasActualStart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#hasActualStart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.owl-ontologies.com/cSite#hasActualStart> <http://www.w3.org/2000/01/rdf-schema#label> "has actual start" .
+# 
+# http://www.owl-ontologies.com/cSite#hasDescription
+<http://www.owl-ontologies.com/cSite#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#hasDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.owl-ontologies.com/cSite#hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has description" .
+# 
+# http://www.owl-ontologies.com/cSite#hasModifiedDate
+<http://www.owl-ontologies.com/cSite#hasModifiedDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#hasModifiedDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#InformationContentEntity> .
+<http://www.owl-ontologies.com/cSite#hasModifiedDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.owl-ontologies.com/cSite#hasModifiedDate> <http://www.w3.org/2000/01/rdf-schema#label> "has modified date" .
+# 
+# http://www.owl-ontologies.com/cSite#hasPlannedEnd
+<http://www.owl-ontologies.com/cSite#hasPlannedEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#hasPlannedEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#hasPlannedEnd> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.owl-ontologies.com/cSite#hasPlannedEnd> <http://www.w3.org/2000/01/rdf-schema#label> "has planned end" .
+# 
+# http://www.owl-ontologies.com/cSite#hasPlannedStart
+<http://www.owl-ontologies.com/cSite#hasPlannedStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#hasPlannedStart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#hasPlannedStart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.owl-ontologies.com/cSite#hasPlannedStart> <http://www.w3.org/2000/01/rdf-schema#label> "has planned start" .
+# 
+# http://www.owl-ontologies.com/cSite#hasRevision
+<http://www.owl-ontologies.com/cSite#hasRevision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#hasRevision> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#InformationContentEntity> .
+<http://www.owl-ontologies.com/cSite#hasRevision> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.owl-ontologies.com/cSite#hasRevision> <http://www.w3.org/2000/01/rdf-schema#label> "has revision" .
+# 
+# http://www.owl-ontologies.com/cSite#hasSpaceNumber
+<http://www.owl-ontologies.com/cSite#hasSpaceNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#hasSpaceNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/bot#Space> .
+<http://www.owl-ontologies.com/cSite#hasSpaceNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.owl-ontologies.com/cSite#hasSpaceNumber> <http://www.w3.org/2000/01/rdf-schema#label> "has space number" .
+# 
+# http://www.owl-ontologies.com/cSite#hasStatus
+<http://www.owl-ontologies.com/cSite#hasStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#hasStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#InformationContentEntity> .
+<http://www.owl-ontologies.com/cSite#hasStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.owl-ontologies.com/cSite#hasStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has status" .
+# 
+# http://www.owl-ontologies.com/cSite#hasSubmissionDate
+<http://www.owl-ontologies.com/cSite#hasSubmissionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#hasSubmissionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#InformationContentEntity> .
+<http://www.owl-ontologies.com/cSite#hasSubmissionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.owl-ontologies.com/cSite#hasSubmissionDate> <http://www.w3.org/2000/01/rdf-schema#label> "has submission date" .
+# 
+# http://www.owl-ontologies.com/cSite#hasSubmittedDate
+<http://www.owl-ontologies.com/cSite#hasSubmittedDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#hasSubmittedDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#InformationContentEntity> .
+<http://www.owl-ontologies.com/cSite#hasSubmittedDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.owl-ontologies.com/cSite#hasSubmittedDate> <http://www.w3.org/2000/01/rdf-schema#label> "has submitted date" .
+# 
+# http://www.owl-ontologies.com/cSite#hasVersion
+<http://www.owl-ontologies.com/cSite#hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/cSite#hasVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/dici#InformationContentEntity> .
+<http://www.owl-ontologies.com/cSite#hasVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.owl-ontologies.com/cSite#hasVersion> <http://www.w3.org/2000/01/rdf-schema#label> "has version" .
+# 
+# http://www.owl-ontologies.com/foaf#firstName
+<http://www.owl-ontologies.com/foaf#firstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/foaf#firstName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/prov#Person> .
+<http://www.owl-ontologies.com/foaf#firstName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.owl-ontologies.com/foaf#firstName> <http://www.w3.org/2000/01/rdf-schema#label> "first name" .
+# 
+# http://www.owl-ontologies.com/foaf#lastName
+<http://www.owl-ontologies.com/foaf#lastName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/foaf#lastName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/prov#Person> .
+<http://www.owl-ontologies.com/foaf#lastName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.owl-ontologies.com/foaf#lastName> <http://www.w3.org/2000/01/rdf-schema#label> "last name" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.owl-ontologies.com/bfo#Equipement
+<http://www.owl-ontologies.com/bfo#Equipement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/bfo#Equipement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/bfo#Object> .
+<http://www.owl-ontologies.com/bfo#Equipement> <http://www.w3.org/2000/01/rdf-schema#label> "Equipement" .
+# 
+# http://www.owl-ontologies.com/bfo#MaterialBatch
+<http://www.owl-ontologies.com/bfo#MaterialBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/bfo#MaterialBatch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/bfo#Object> .
+<http://www.owl-ontologies.com/bfo#MaterialBatch> <http://www.w3.org/2000/01/rdf-schema#label> "Material Batch" .
+# 
+# http://www.owl-ontologies.com/bfo#Object
+<http://www.owl-ontologies.com/bfo#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/bfo#Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#Resource> .
+<http://www.owl-ontologies.com/bfo#Object> <http://www.w3.org/2000/01/rdf-schema#label> "Object" .
+# 
+# http://www.owl-ontologies.com/bfo#Role
+<http://www.owl-ontologies.com/bfo#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/bfo#Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#OtherCollection> .
+<http://www.owl-ontologies.com/bfo#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role" .
+# 
+# http://www.owl-ontologies.com/bot#Building
+<http://www.owl-ontologies.com/bot#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/bot#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/bot#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building" .
+# 
+# http://www.owl-ontologies.com/bot#Element
+<http://www.owl-ontologies.com/bot#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/bot#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/dice#BuildingObject> .
+<http://www.owl-ontologies.com/bot#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Element" .
+# 
+# http://www.owl-ontologies.com/bot#Site
+<http://www.owl-ontologies.com/bot#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/bot#Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/bot#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site" .
+# 
+# http://www.owl-ontologies.com/bot#Space
+<http://www.owl-ontologies.com/bot#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/bot#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/bot#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Space" .
+# 
+# http://www.owl-ontologies.com/bot#Storey
+<http://www.owl-ontologies.com/bot#Storey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/bot#Zone> .
+<http://www.owl-ontologies.com/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Storey" .
+# 
+# http://www.owl-ontologies.com/bot#Zone
+<http://www.owl-ontologies.com/bot#Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/dice#Location> .
+<http://www.owl-ontologies.com/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "Zone" .
+# 
+# http://www.owl-ontologies.com/cSite#AuthorityToProceed
+<http://www.owl-ontologies.com/cSite#AuthorityToProceed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#AuthorityToProceed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#QualityActivity> .
+<http://www.owl-ontologies.com/cSite#AuthorityToProceed> <http://www.w3.org/2000/01/rdf-schema#label> "Authority To Proceed" .
+# 
+# http://www.owl-ontologies.com/cSite#Collection
+<http://www.owl-ontologies.com/cSite#Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#Collection> <http://www.w3.org/2000/01/rdf-schema#label> "Collection" .
+# 
+# http://www.owl-ontologies.com/cSite#ConstructionSubmittal
+<http://www.owl-ontologies.com/cSite#ConstructionSubmittal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#ConstructionSubmittal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#ProductionSubmittal> .
+<http://www.owl-ontologies.com/cSite#ConstructionSubmittal> <http://www.w3.org/2000/01/rdf-schema#label> "Construction Submittal" .
+# 
+# http://www.owl-ontologies.com/cSite#ConstuctiionActivity
+<http://www.owl-ontologies.com/cSite#ConstuctiionActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#ConstuctiionActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#ConstuctiionActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Constuctiion Activity" .
+# 
+# http://www.owl-ontologies.com/cSite#Contractor
+<http://www.owl-ontologies.com/cSite#Contractor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#Contractor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/prov#Organization> .
+<http://www.owl-ontologies.com/cSite#Contractor> <http://www.w3.org/2000/01/rdf-schema#label> "Contractor" .
+# 
+# http://www.owl-ontologies.com/cSite#Designer
+<http://www.owl-ontologies.com/cSite#Designer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#Designer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/prov#Organization> .
+<http://www.owl-ontologies.com/cSite#Designer> <http://www.w3.org/2000/01/rdf-schema#label> "Designer" .
+# 
+# http://www.owl-ontologies.com/cSite#EngineeringActivity
+<http://www.owl-ontologies.com/cSite#EngineeringActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#EngineeringActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#EngineeringActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Engineering Activity" .
+# 
+# http://www.owl-ontologies.com/cSite#FileFormat
+<http://www.owl-ontologies.com/cSite#FileFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#FileFormat> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#SubmittalCollection> .
+<http://www.owl-ontologies.com/cSite#FileFormat> <http://www.w3.org/2000/01/rdf-schema#label> "File Format" .
+# 
+# http://www.owl-ontologies.com/cSite#HaulageComapny
+<http://www.owl-ontologies.com/cSite#HaulageComapny> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#HaulageComapny> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/prov#Organization> .
+<http://www.owl-ontologies.com/cSite#HaulageComapny> <http://www.w3.org/2000/01/rdf-schema#label> "Haulage Comapny" .
+# 
+# http://www.owl-ontologies.com/cSite#Milestone
+<http://www.owl-ontologies.com/cSite#Milestone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#Milestone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#OtherCollection> .
+<http://www.owl-ontologies.com/cSite#Milestone> <http://www.w3.org/2000/01/rdf-schema#label> "Milestone" .
+# 
+# http://www.owl-ontologies.com/cSite#OtherCollection
+<http://www.owl-ontologies.com/cSite#OtherCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#OtherCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#Collection> .
+<http://www.owl-ontologies.com/cSite#OtherCollection> <http://www.w3.org/2000/01/rdf-schema#label> "Other Collection" .
+# 
+# http://www.owl-ontologies.com/cSite#Owner
+<http://www.owl-ontologies.com/cSite#Owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#Owner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/prov#Organization> .
+<http://www.owl-ontologies.com/cSite#Owner> <http://www.w3.org/2000/01/rdf-schema#label> "Owner" .
+# 
+# http://www.owl-ontologies.com/cSite#PostconstructionSubmittal
+<http://www.owl-ontologies.com/cSite#PostconstructionSubmittal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#PostconstructionSubmittal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#ProductionSubmittal> .
+<http://www.owl-ontologies.com/cSite#PostconstructionSubmittal> <http://www.w3.org/2000/01/rdf-schema#label> "Postconstruction Submittal" .
+# 
+# http://www.owl-ontologies.com/cSite#PreconstructionSubmittal
+<http://www.owl-ontologies.com/cSite#PreconstructionSubmittal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#PreconstructionSubmittal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#ProductionSubmittal> .
+<http://www.owl-ontologies.com/cSite#PreconstructionSubmittal> <http://www.w3.org/2000/01/rdf-schema#label> "Preconstruction Submittal" .
+# 
+# http://www.owl-ontologies.com/cSite#ProcurementActivity
+<http://www.owl-ontologies.com/cSite#ProcurementActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#ProcurementActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#ProcurementActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Procurement Activity" .
+# 
+# http://www.owl-ontologies.com/cSite#ProductionSubmittal
+<http://www.owl-ontologies.com/cSite#ProductionSubmittal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#ProductionSubmittal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/dici#Dataset> .
+<http://www.owl-ontologies.com/cSite#ProductionSubmittal> <http://www.w3.org/2000/01/rdf-schema#label> "Production Submittal" .
+# 
+# http://www.owl-ontologies.com/cSite#Project
+<http://www.owl-ontologies.com/cSite#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#OtherCollection> .
+<http://www.owl-ontologies.com/cSite#Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project" .
+# 
+# http://www.owl-ontologies.com/cSite#QualityActivity
+<http://www.owl-ontologies.com/cSite#QualityActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#QualityActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/dice#Activity> .
+<http://www.owl-ontologies.com/cSite#QualityActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Quality Activity" .
+# 
+# http://www.owl-ontologies.com/cSite#QualityHoldPoint
+<http://www.owl-ontologies.com/cSite#QualityHoldPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#QualityHoldPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#QualityActivity> .
+<http://www.owl-ontologies.com/cSite#QualityHoldPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Quality Hold Point" .
+# 
+# http://www.owl-ontologies.com/cSite#QualitySignOff
+<http://www.owl-ontologies.com/cSite#QualitySignOff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#QualitySignOff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#QualityActivity> .
+<http://www.owl-ontologies.com/cSite#QualitySignOff> <http://www.w3.org/2000/01/rdf-schema#label> "Quality Sign Off" .
+# 
+# http://www.owl-ontologies.com/cSite#Resource
+<http://www.owl-ontologies.com/cSite#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#Resource> <http://www.w3.org/2000/01/rdf-schema#label> "Resource" .
+# 
+# http://www.owl-ontologies.com/cSite#SpaceType
+<http://www.owl-ontologies.com/cSite#SpaceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#SpaceType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#OtherCollection> .
+<http://www.owl-ontologies.com/cSite#SpaceType> <http://www.w3.org/2000/01/rdf-schema#label> "Space Type" .
+# 
+# http://www.owl-ontologies.com/cSite#SubmittalCollection
+<http://www.owl-ontologies.com/cSite#SubmittalCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#SubmittalCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#Collection> .
+<http://www.owl-ontologies.com/cSite#SubmittalCollection> <http://www.w3.org/2000/01/rdf-schema#label> "Submittal Collection" .
+# 
+# http://www.owl-ontologies.com/cSite#SubmittalDiscpline
+<http://www.owl-ontologies.com/cSite#SubmittalDiscpline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#SubmittalDiscpline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#SubmittalCollection> .
+<http://www.owl-ontologies.com/cSite#SubmittalDiscpline> <http://www.w3.org/2000/01/rdf-schema#label> "Submittal Discpline" .
+# 
+# http://www.owl-ontologies.com/cSite#SubmittalType
+<http://www.owl-ontologies.com/cSite#SubmittalType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#SubmittalType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#SubmittalCollection> .
+<http://www.owl-ontologies.com/cSite#SubmittalType> <http://www.w3.org/2000/01/rdf-schema#label> "Submittal Type" .
+# 
+# http://www.owl-ontologies.com/cSite#SubmittalWorkflow
+<http://www.owl-ontologies.com/cSite#SubmittalWorkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#SubmittalWorkflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#SubmittalCollection> .
+<http://www.owl-ontologies.com/cSite#SubmittalWorkflow> <http://www.w3.org/2000/01/rdf-schema#label> "Submittal Workflow" .
+# 
+# http://www.owl-ontologies.com/cSite#Workpackage
+<http://www.owl-ontologies.com/cSite#Workpackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/cSite#Workpackage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#OtherCollection> .
+<http://www.owl-ontologies.com/cSite#Workpackage> <http://www.w3.org/2000/01/rdf-schema#label> "Workpackage" .
+# 
+# http://www.owl-ontologies.com/dice#Activity
+<http://www.owl-ontologies.com/dice#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/dice#Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/event#Event> .
+<http://www.owl-ontologies.com/dice#Activity> <http://www.w3.org/2000/01/rdf-schema#label> "Activity" .
+# 
+# http://www.owl-ontologies.com/dice#BuildingObject
+<http://www.owl-ontologies.com/dice#BuildingObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/dice#BuildingObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/bfo#Object> .
+<http://www.owl-ontologies.com/dice#BuildingObject> <http://www.w3.org/2000/01/rdf-schema#label> "Building Object" .
+# 
+# http://www.owl-ontologies.com/dice#Location
+<http://www.owl-ontologies.com/dice#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/dice#Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location" .
+# 
+# http://www.owl-ontologies.com/dici#Dataset
+<http://www.owl-ontologies.com/dici#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/dici#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/dici#InformationContainer> .
+<http://www.owl-ontologies.com/dici#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset" .
+# 
+# http://www.owl-ontologies.com/dici#InformationContainer
+<http://www.owl-ontologies.com/dici#InformationContainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/dici#InformationContainer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/dici#InformationContentEntity> .
+<http://www.owl-ontologies.com/dici#InformationContainer> <http://www.w3.org/2000/01/rdf-schema#label> "Information Container" .
+# 
+# http://www.owl-ontologies.com/dici#InformationContentEntity
+<http://www.owl-ontologies.com/dici#InformationContentEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/dici#InformationContentEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Information Content Entity" .
+# 
+# http://www.owl-ontologies.com/dici#Plan
+<http://www.owl-ontologies.com/dici#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/dici#Plan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/dici#Dataset> .
+<http://www.owl-ontologies.com/dici#Plan> <http://www.w3.org/2000/01/rdf-schema#label> "Plan" .
+# 
+# http://www.owl-ontologies.com/dici#WeekPlan
+<http://www.owl-ontologies.com/dici#WeekPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/dici#WeekPlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/dici#Plan> .
+<http://www.owl-ontologies.com/dici#WeekPlan> <http://www.w3.org/2000/01/rdf-schema#label> "Week Plan" .
+# 
+# http://www.owl-ontologies.com/event#Event
+<http://www.owl-ontologies.com/event#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/event#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
+# 
+# http://www.owl-ontologies.com/prov#Agent
+<http://www.owl-ontologies.com/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/cSite#Resource> .
+<http://www.owl-ontologies.com/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
+# 
+# http://www.owl-ontologies.com/prov#Organization
+<http://www.owl-ontologies.com/prov#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/prov#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/prov#Agent> .
+<http://www.owl-ontologies.com/prov#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
+# 
+# http://www.owl-ontologies.com/prov#Person
+<http://www.owl-ontologies.com/prov#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/prov#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/prov#Agent> .
+<http://www.owl-ontologies.com/prov#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
