@@ -1,34 +1,61 @@
-About Widoco output
-===================
-The purpose of Widoco is to reuse and integrate existing tools for documentation, plus the set of features listed below:
-* Separation of the sections of your html page so you can write them independently and replace only those needed.
-* Automatic annotation in RDF-a of the html produced.
-* Association of a provenance page which includes the history of your vocabulary (W3C PROV-O compliant).
-* Metadata extraction from the ontology plus the means to complete it on the fly when generating your ontology.
-* Guidelines on the main sections that your document should have and how to complete them.
+# CSite Ontology
 
-Widoco will create 3 different folders:
-|
-|-provenance (a folder including an html and RDF serialization of how the documentation page was created)
-|-resources (folder with the different resources)
-|-sections (folder with the different sections of the documentation, separated for easy editing. Just edit one and the main page will be updated)
+The **CSite ontology** provides a modular semantic framework for integrating data related to production control in construction projects. It was developed as part of ongoing research at TU Delft, with use cases validated in live digital twin construction control rooms.
 
-Completing ontology metadata.
-===================
-Widoco uses the ontology metadata to update a configuration file. If you complete that configuration file (ended up widoco.conf), the tool will enhance your html with additional details, such as how to cite the document, previous revisions, icons with the licence, etc.
+📖 **Online Documentation:**  
+https://digiconstructlab-tu-delft.github.io/cSiteOntology/
 
-Browser issues
-==========
-The result of executing Widoco is an html file. We have tested it in Mozilla, IE and Chrome, and when the page is stored in a server all the browsers work correctly. If you view the file locally, we recommend you to use Mozilla Firefox (or Internet Explorer, if you must). Google Chrome will not show the contents correctly, as it doesn't allow  XMLHttpRequest without HTTP. If you want to view the page locally with Google Chrome you have two possibilities:
+🔗 **Permanent Identifier (W3ID):**  
+https://w3id.org/cSite
 
-a) Place the file in a server and access it via its URL (for example, put it in dropbox and access through its public url).
+---
 
-b) Execute Chrome with the following commands :
+## 🧠 Purpose
 
-(WIN) chrome.exe --allow-file-access-from-files,
+CSite enables the semantic integration of:
 
-(OSX) open /Applications/Google\ Chrome.app/ --args --allow-file-access-from-files
+- Spatial hierarchy (site, building, storey, workspace) using BOT
+- Project resources (agents, equipment, materials) aligned with PROV and BFO
+- Planning and execution activities (engineering, procurement, QA) with spatial, temporal, and resource links
+- Document control and planning workflows (submittals, week plans) based on DICE
 
-(UNX) /usr/bin/google-chrome --allow-file-access-from-files
+It supports queries such as:
 
-Do you have a problem? open an issue at https://github.com/dgarijo/Widoco
+- “Which subcontractor had the lowest productivity this week?”
+- “What activities were replanned and why?”
+- “Which deliverables are pending due to missing submittals?”
+
+---
+
+## 📦 Repository Contents
+
+```
+cSiteOntology/
+├── index-en.html           # Main WIDOCO-generated HTML page
+├── ontology.ttl            # Turtle serialization of CSite ontology
+├── ontology.owl            # RDF/XML serialization
+├── ontology.jsonld         # JSON-LD serialization
+├── resources/              # Images, CSS, JS used by documentation
+├── sections/               # Editable HTML sections for WIDOCO
+├── provenance/             # Provenance metadata about how the page was generated
+├── README.md               # This file
+```
+
+---
+
+## 📚 Citation
+
+Farghaly, K., Soman, R., Whyte, J. (2024). *CSite ontology for production control of construction sites*. Automation in Construction, 158, 105224.  
+Soman, R.K., Farghaly, K., Mills, G., Whyte, J. (2025). *Digital twin construction with a focus on human twin interfaces*. Automation in Construction, 170, 105924.
+
+-
+## 🛠 Developed With
+
+- [WIDOCO](https://github.com/dgarijo/Widoco) – for automatic ontology documentation generation
+- [BOT](https://w3id.org/bot), [PROV-O](https://www.w3.org/TR/prov-o/), [BFO](https://github.com/BFO-ontology/BFO), [DICE](https://digitalconstruction.github.io/Entities/)
+
+---
+
+## ❓ Questions or Issues?
+
+Open an issue on this repository or contact the contributors via TU Delft.
